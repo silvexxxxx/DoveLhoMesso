@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dove L'ho Messo - Organizza la tua casa e la tua dispensa con l'app di SilverX.">
+    <title>Dove L'ho Messo | Official Landing Page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-brown: #8B4513; /* Il tuo Marrone */
+            --accent-gold: #D4AF37;   /* Il tuo Oro */
+            --light-bg: #FAF9F6;      /* Sfondo crema pulito */
+            --dark-text: #2D1A0A;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+        }
+
+        /* Navigazione */
+        nav {
+            background: var(--primary-brown);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        nav .logo {
+            color: var(--accent-gold);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(139, 69, 19, 0.9), rgba(45, 26, 10, 0.9)), 
+                        url('https://images.unsplash.com/photo-1581706482141-f5463301505b?q=80&w=2070'); /* Immagine di sfondo organizzazione */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 10%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-gold);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            background-color: var(--accent-gold);
+            color: var(--primary-brown);
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--accent-gold);
+        }
+
+        /* Cards Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 80px 10%;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .card h3 {
+            color: var(--primary-brown);
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 15px;
+        }
+
+        /* Privacy Policy Section */
+        .privacy-section {
+            background-color: #eee;
+            padding: 60px 10%;
+            font-size: 0.9rem;
+            color: #555;
+            border-top: 1px solid #ddd;
+        }
+
+        footer {
+            background: var(--primary-brown);
+            color: var(--accent-gold);
+            text-align: center;
+            padding: 40px;
+            border-top: 4px solid var(--accent-gold);
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Dove L'ho Messo</div>
+</nav>
+
+<section class="hero">
+    <h1>Semplifica il tuo Spazio</h1>
+    <p>L'inventario domestico intelligente creato da <strong>SilverX</strong> per chi vuole ritrovare ogni oggetto in un istante. Dalla dispensa al garage, tutto sotto controllo.</p>
+    <a href="#playstore" class="cta-button">Scarica su Google Play</a>
+</section>
+
+<div class="features">
+    <div class="card">
+        <span class="card-icon">🏷️</span>
+        <h3>Codici Rif.</h3>
+        <p>Assegna codici unici come <strong>A001</strong> ai tuoi contenitori e trova il contenuto senza aprirli.</p>
+    </div>
+    <div class="card">
+        <span class="card-icon">🍎</span>
+        <h3>Scadenze</h3>
+        <p>Monitora la data di scadenza di alimenti e farmaci. Mai più sprechi in casa.</p>
+    </div>
+    <div class="card">
+        <span class="card-icon">🏠</span>
+        <h3>Gerarchia Reale</h3>
+        <p>Organizza per Stanze, Mobili e Scatole. Una struttura a matrioska intuitiva e potente.</p>
+    </div>
+</div>
+
+<section class="privacy-section" id="privacy">
+    <h2>Privacy Policy & Trasparenza</h2>
+    <p>Sviluppatore: <strong>SilverX</strong>. Questa applicazione utilizza Google AdMob per mostrare annunci pubblicitari. Nessun dato sensibile dell'inventario viene condiviso esternamente; i dati risiedono sul tuo dispositivo.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Dove L'ho Messo - SilverX Digital Solutions</p>
+    <div class="footer-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="mailto:support@silverx.com">Supporto</a>
+    </div>
+</footer>
+
+</body>
+</html>
