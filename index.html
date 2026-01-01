@@ -10,9 +10,9 @@
     
     <style>
         :root {
-            --primary-brown: #8B4513; /* Il tuo Marrone */
-            --accent-gold: #D4AF37;   /* Il tuo Oro */
-            --light-bg: #FAF9F6;      /* Sfondo crema pulito */
+            --primary-brown: #8B4513; 
+            --accent-gold: #D4AF37;   
+            --light-bg: #FAF9F6;      
             --dark-text: #2D1A0A;
             --white: #ffffff;
         }
@@ -24,7 +24,6 @@
             color: var(--dark-text);
         }
 
-        /* Navigazione */
         nav {
             background: var(--primary-brown);
             padding: 1rem 5%;
@@ -40,16 +39,20 @@
             font-weight: 700;
             font-size: 1.5rem;
             text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        /* Hero Section */
+        .nav-icon { width: 40px; border-radius: 8px; border: 1px solid var(--accent-gold); }
+
         .hero {
             background: linear-gradient(rgba(139, 69, 19, 0.9), rgba(45, 26, 10, 0.9)), 
-                        url('https://images.unsplash.com/photo-1581706482141-f5463301505b?q=80&w=2070'); /* Immagine di sfondo organizzazione */
+                        url('https://images.unsplash.com/photo-1581706482141-f5463301505b?q=80&w=2070'); 
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 100px 10%;
+            padding: 80px 10%;
             text-align: center;
         }
 
@@ -84,7 +87,41 @@
             color: var(--accent-gold);
         }
 
-        /* Cards Section */
+        /* Sezione Screenshots */
+        .gallery {
+            padding: 60px 5%;
+            text-align: center;
+            background: #fff;
+        }
+
+        .gallery h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-brown);
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .screenshot-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .screenshot-grid img {
+            width: 220px;
+            border-radius: 15px;
+            border: 3px solid var(--primary-brown);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot-grid img:hover {
+            transform: scale(1.05);
+            border-color: var(--accent-gold);
+        }
+
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -102,15 +139,9 @@
             border: 1px solid rgba(212, 175, 55, 0.2);
         }
 
-        .card:hover {
-            transform: translateY(-10px);
-        }
+        .card:hover { transform: translateY(-10px); }
 
-        .card-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            display: block;
-        }
+        .card-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
 
         .card h3 {
             color: var(--primary-brown);
@@ -118,14 +149,15 @@
             margin-bottom: 15px;
         }
 
-        /* Privacy Policy Section */
         .privacy-section {
-            background-color: #eee;
+            background-color: #f9f9f9;
             padding: 60px 10%;
-            font-size: 0.9rem;
-            color: #555;
+            font-size: 0.95rem;
+            color: #444;
             border-top: 1px solid #ddd;
         }
+
+        .privacy-section h2 { color: var(--primary-brown); font-family: 'Montserrat', sans-serif; }
 
         footer {
             background: var(--primary-brown);
@@ -146,40 +178,59 @@
 <body>
 
 <nav>
-    <div class="logo">Dove L'ho Messo</div>
+    <div class="logo">
+        <img src="DoveLhoMesso_ico_screen.jpg" alt="Logo" class="nav-icon">
+        Dove L'ho Messo
+    </div>
 </nav>
 
 <section class="hero">
     <h1>Semplifica il tuo Spazio</h1>
     <p>L'inventario domestico intelligente creato da <strong>SilverX</strong> per chi vuole ritrovare ogni oggetto in un istante. Dalla dispensa al garage, tutto sotto controllo.</p>
-    <a href="#playstore" class="cta-button">Scarica su Google Play</a>
+    <a href="#" class="cta-button">Disponibile su Google Play</a>
+</section>
+
+<section class="gallery">
+    <h2>Interfaccia Intuitiva</h2>
+    <div class="screenshot-grid">
+        <img src="DoveLhoMesso_home.jpg" alt="Home Light">
+        <img src="DoveLhoMesso_Dark_home.jpg" alt="Home Dark">
+        <img src="TrovaUnOggetto.jpg" alt="Ricerca">
+        <img src="SchedaOggetto_Dark.jpg" alt="Dettagli Dark">
+    </div>
 </section>
 
 <div class="features">
-    <div class="card">
-        <span class="card-icon">🏷️</span>
-        <h3>Codici Rif.</h3>
-        <p>Assegna codici unici come <strong>A001</strong> ai tuoi contenitori e trova il contenuto senza aprirli.</p>
-    </div>
-    <div class="card">
-        <span class="card-icon">🍎</span>
-        <h3>Scadenze</h3>
-        <p>Monitora la data di scadenza di alimenti e farmaci. Mai più sprechi in casa.</p>
-    </div>
     <div class="card">
         <span class="card-icon">🏠</span>
         <h3>Gerarchia Reale</h3>
         <p>Organizza per Stanze, Mobili e Scatole. Una struttura a matrioska intuitiva e potente.</p>
     </div>
+    <div class="card">
+        <span class="card-icon">🔍</span>
+        <h3>Ricerca Visuale</h3>
+        <p>Trova quello che cerchi in pochi secondi grazie al sistema di filtri per luogo e nome.</p>
+    </div>
+    <div class="card">
+        <span class="card-icon">📸</span>
+        <h3>Memoria Fotografica</h3>
+        <p>Associa una foto a ogni oggetto per riconoscerlo al volo senza dover aprire i contenitori.</p>
+    </div>
 </div>
 
 <section class="privacy-section" id="privacy">
     <h2>Privacy Policy & Trasparenza</h2>
-    <p>Sviluppatore: <strong>SilverX</strong>. Questa applicazione utilizza Google AdMob per mostrare annunci pubblicitari. Nessun dato sensibile dell'inventario viene condiviso esternamente; i dati risiedono sul tuo dispositivo.</p>
+    <p>Sviluppatore: <strong>SilverX</strong>.</p>
+    <p>Questa applicazione rispetta la tua privacy:</p>
+    <ul>
+        <li>Tutti i dati del tuo inventario sono salvati <strong>esclusivamente in locale</strong> sul tuo dispositivo.</li>
+        <li>L'app utilizza Google AdMob per visualizzare annunci pubblicitari, che potrebbero raccogliere identificativi anonimi per scopi di marketing.</li>
+        <li>Non è richiesto alcun account per l'utilizzo delle funzioni principali.</li>
+    </ul>
 </section>
 
 <footer>
-    <p>&copy; 2025 Dove L'ho Messo - SilverX Digital Solutions</p>
+    <p>&copy; 2026 Dove L'ho Messo - SilverX Digital Solutions</p>
     <div class="footer-links">
         <a href="#privacy">Privacy Policy</a>
         <a href="mailto:support@silverx.com">Supporto</a>
